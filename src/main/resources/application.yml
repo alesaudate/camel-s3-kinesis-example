@@ -1,0 +1,19 @@
+camel:
+  springboot:
+    main-run-controller: true
+  component:
+    aws2-s3:
+      accessKey: ${aws.access-key}
+      secretKey: ${aws.secret-key}
+      region: ${aws.region}
+    aws2-kinesis:
+      accessKey: ${aws.access-key}
+      secretKey: ${aws.secret-key}
+      region: ${aws.region}
+
+logging:
+  pattern:
+    console: "%-5p [%d{ISO8601}] [Thread: %t] [%X] %-55c  %m%n"
+
+  level:
+    org.apache.camel: INFO
